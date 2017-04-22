@@ -47,3 +47,12 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+target/classes/com/moo/fakeapitests/AddressEntity.class
+target/classes/com/moo/fakeapitests/CompanyEntity.class
+target/classes/com/moo/fakeapitests/GeoEntity.class
+target/classes/com/moo/fakeapitests/UserRequestEntity.class
+target/generated-sources/
+target/generated-test-sources/
+target/test-classes/com/moo/fakeapitests/CreateUsers.class
+target/test-classes/com/moo/fakeapitests/DeleteUsers.class
+target/test-classes/com/moo/fakeapitests/utils/
