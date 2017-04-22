@@ -3,7 +3,7 @@ package com.moo.fakeapitests;
 import com.jayway.restassured.RestAssured;
 import com.moo.fakeapitests.utils.UserRequestUtils;
 import org.apache.http.HttpStatus;
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.Hashtable;
