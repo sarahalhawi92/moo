@@ -10,3 +10,5 @@ Frameworks used - maven, restassured, testng
 3. Tests can be run by doing 'mvn test'
 
 note: if you don't have maven installed, you can just run the tests by going to the test package, right click and then select 'run all tests in package'
+
+Postman collection of playing around with the requests: https://www.getpostman.com/collections/e119ff8efb47ce341ab5
