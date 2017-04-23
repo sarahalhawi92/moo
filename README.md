@@ -6,5 +6,7 @@ This has been setup as a maven project using java and testng. To run the project
 
 Frameworks used - restassured, testng
 
-2. Go to project root in a terminal and do mvn clean install
-3. Tests can be run by doing 'mvn test' or by going to the test package, right click and then select 'run all tests in package'
+2. Go to project root in a terminal and do mvn 'clean install'
+3. Tests can be run by doing 'mvn test'
+
+note: if you don't have maven installed, you can just run the tests by going to the test package, right click and then select 'run all tests in package'
