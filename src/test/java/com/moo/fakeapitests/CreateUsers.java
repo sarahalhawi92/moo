@@ -44,6 +44,7 @@ public class CreateUsers extends UserRequestUtils {
                 .statusCode(HttpStatus.SC_CREATED).and()
                 .body("id", equalTo(11))
                 .body("name", equalTo("Sarah Alhawi"))
-                .body("username", equalTo("sarahal"));
+                .body("username", equalTo("sarahal"))
+                .body("email", equalTo("shawi3333@gmail.com"));
     }
 }
