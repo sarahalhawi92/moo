@@ -1,0 +1,41 @@
+1. If this were a real story from a real life Product Owner - what questions would you
+ask?
+
+For this 'API', I would probably ask:
+-what is the minimum amount of data that is required to create a user? 
+-when should we not create a user?
+-should there be any authorisation on these endpoints? where will these be expected to be accessible from
+
+2. Why did you choose to structure your code in the way you did?
+
+I like to write tests using a given_when_then format so that they are readable and easy to understand. I split the test classes 
+into the different features of the API and if they were positive and negative scenarios I would split these further down. I created seperate 
+classes for creating the objects as these can be used by any class that requires a creation of a user. I created a 'Util' class where all
+the methods for creating, removing and retrieving information about users can be placed.
+
+3. If you had more time what improvements would you make to your code?
+
+If this was a real API there would have been scenarios I would have liked to cover such as when a user is added then the GET for that user 
+should work too. 
+In the 'CreateUsers' > 'whenCreatingAUserWithSpecificDetails_thenUserIsCreated' test I am sending geo, company and address fields as null,
+because these are part of the UserRequestEntity. I would add some validation to ensure that if certain fields are not sent by the user
+that they are not sent as part of the request object.
+I would create some more Util methods such as the one that is used in the test 'GetUsers' >
+'whenSendingAGetRequestForAnInvalidUser_thenNotFoundErrorIsReturned'to check the length of the array object returned is empty or of a 
+certain size. This would probably be useful for other tests. 
+I would extract any methods that are common between all the tests such as posting to the /users endpoint.
+
+4. What is your usual approach to testing on a project? (Hint: talk about different levels
+of testing you would do; who would collaborate with whom etc)
+
+I would always start off by making sure the requirements and acceptance criteria are clear before starting any tests with the developers.
+This means that I can have a rough idea of where exactly the code needs to be changed or added. Then, I pair with developers to start off
+by writing the e2e tests as these are the highest level of tests that can be written based on the acceptance criteria. I start off by basing
+our tests around these criteria and then we can add more as we think of them. Once these are written, we make sure that these are failing
+for the right reasons and then we can start going and adding code to pass these tests. At this stage, developers usually pair together to do
+the implementation and write unit tests, most times we triple up!
+In terms of overall coverage, I take general guidance from the testing pyramid; 70-80% unit tests, 10% integration tests, <5& e2e tests as 
+these are expensive and in their nature brittle.
+I always like to check with non-technical team members that our tests are of good quality, they should be able to read them and know what 
+they are doing roughly. Also for security-related user stories (for example, adding logging requirements for auditing purposes), I liase
+with the security to ensure they are happy with the tests we will have and the code.
