@@ -46,5 +46,6 @@ public class CreateUsers extends UserRequestUtils {
                 .body("name", equalTo("Sarah Alhawi"))
                 .body("username", equalTo("sarahal"))
                 .body("email", equalTo("shawi3333@gmail.com"));
+
     }
 }
