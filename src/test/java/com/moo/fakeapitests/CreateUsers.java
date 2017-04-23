@@ -42,6 +42,8 @@ public class CreateUsers extends UserRequestUtils {
                 .prettyPeek()
                 .then()
                 .statusCode(HttpStatus.SC_CREATED).and()
-                .body("id", equalTo(11));
+                .body("id", equalTo(11))
+                .body("name", equalTo("Sarah Alhawi"))
+                .body("username", equalTo("sarahal"));
     }
 }
